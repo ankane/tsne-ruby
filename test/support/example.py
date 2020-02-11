@@ -2,7 +2,7 @@ import numpy as np
 from MulticoreTSNE import MulticoreTSNE as TSNE
 
 x = np.array([[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]])
-model = TSNE()
+model = TSNE(random_state=123)
 embeddings = model.fit_transform(x)
 
 print(embeddings.shape)
