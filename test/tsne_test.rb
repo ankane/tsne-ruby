@@ -8,10 +8,26 @@ class TSNETest < Minitest::Test
 
     assert_equal [4, 2], embeddings.shape
 
-    # assert_in_delta -438.231549, embeddings[0, true][0]
-    # assert_in_delta 0.310034518, embeddings[0, true][1]
+    if windows?
+      assert_in_delta 0.19657319566021392, tsne.kl_divergence, 0.01
+    elsif mac?
+      assert_in_delta -438.231549, embeddings[0, true][0]
+      assert_in_delta 0.310034518, embeddings[0, true][1]
+      assert_in_delta 0.19657319566021392, tsne.kl_divergence
+    else
+      assert_in_delta -1049.43900138, embeddings[0, true][0]
+      assert_in_delta -895.52140476, embeddings[0, true][1]
+      assert_in_delta 0.16304681779803065, tsne.kl_divergence
+    end
 
-    assert_in_delta 0.19657319566021392, tsne.kl_divergence, 0.01
     assert_equal 1000, tsne.n_iter
+  end
+
+  def windows?
+    Gem.win_platform?
+  end
+
+  def mac?
+    RbConfig::CONFIG["host_os"] =~ /darwin/i
   end
 end
