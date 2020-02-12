@@ -7,8 +7,7 @@ module TSNE
       dlload Fiddle.dlopen(libs.shift)
     rescue Fiddle::DLError => e
       retry if libs.any?
-      raise e if ENV["TSNE_DEBUG"]
-      raise LoadError, "Could not find t-SNE"
+      raise e
     end
 
     typealias "bool", "char"
