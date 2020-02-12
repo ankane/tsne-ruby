@@ -51,6 +51,10 @@ TSNE.new(
 )
 ```
 
+## MNIST Example
+
+Download [MNIST](https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz) and install [Matplotlib](https://github.com/mrkn/matplotlib.rb) and [Npy](https://github.com/ankane/npy). Then run [the example](examples/mnist.rb).
+
 ## History
 
 View the [changelog](https://github.com/ankane/tsne/blob/master/CHANGELOG.md)
