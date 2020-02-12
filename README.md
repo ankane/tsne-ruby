@@ -17,7 +17,7 @@ gem 'tsne'
 Prep your data
 
 ```ruby
-x = Numo::DFloat.cast([[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]])
+x = [[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]]
 ```
 
 Run
@@ -49,6 +49,20 @@ TSNE.new(
   n_jobs: 1,
   cheat_metric: true
 )
+```
+
+## Data
+
+Data can be a Ruby array
+
+```ruby
+[[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]]
+```
+
+Or a Numo array
+
+```ruby
+Numo::DFloat.new(4, 3).rand
 ```
 
 ## History
