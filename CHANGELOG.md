@@ -1,4 +1,4 @@
-## 0.1.1 (unreleased)
+## 0.1.1 (2020-02-11)
 
 - Fixed `Could not find Multicore t-SNE` error on some Linux platforms
 
