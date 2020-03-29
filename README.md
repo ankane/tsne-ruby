@@ -1,6 +1,6 @@
 # t-SNE
 
-High performance t-SNE for Ruby, powered by [Multicore t-SNE](https://github.com/DmitryUlyanov/tsne)
+High performance t-SNE for Ruby, powered by [Multicore t-SNE](https://github.com/DmitryUlyanov/Multicore-TSNE)
 
 [![Build Status](https://travis-ci.org/ankane/tsne.svg?branch=master)](https://travis-ci.org/ankane/tsne) [![Build status](https://ci.appveyor.com/api/projects/status/m34jqhy8r4q5u3cw/branch/master?svg=true)](https://ci.appveyor.com/project/ankane/tsne/branch/master)
 
