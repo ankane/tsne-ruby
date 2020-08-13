@@ -1,5 +1,7 @@
 BSD 3-Clause License
 
+Copyright (c) 2012, Delft University of Technology
+Copyright (c) 2016, Dmitry Ulyanov (dmitry.ulyanov.msu@gmail.com)
 Copyright (c) 2020, Andrew Kane
 All rights reserved.
 
