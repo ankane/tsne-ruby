@@ -33,6 +33,35 @@ Get Kullback-Leibler divergence
 tsne.kl_divergence
 ```
 
+## Full Example
+
+Install the [matplotlib](https://github.com/mrkn/matplotlib.rb) gem and download the [optdigits.tes](https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tes) from the [Optical Recognition of Handwritten Digits Data Set](https://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits).
+
+```ruby
+require "csv"
+require "matplotlib/pyplot"
+require "tsne"
+
+data = []
+target = []
+CSV.foreach("optdigits.tes", converters: :numeric) do |row|
+  data << row[0...-1]
+  target << row[-1]
+end
+
+tsne = TSNE.new(n_jobs: 4)
+embeddings = tsne.fit_transform(data)
+
+vis_x = embeddings[true, 0]
+vis_y = embeddings[true, 1]
+
+plt = Matplotlib::Pyplot
+plt.scatter(vis_x.to_a, vis_y.to_a, c: target, cmap: plt.cm.get_cmap("jet", 10), marker: ".")
+plt.colorbar(ticks: 10.times.to_a)
+plt.clim(-0.5, 9.5)
+plt.show
+```
+
 ## Parameters
 
 ```ruby
