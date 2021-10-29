@@ -1,8 +1,8 @@
-# t-SNE
+# t-SNE Ruby
 
 High performance t-SNE for Ruby, powered by [Multicore t-SNE](https://github.com/DmitryUlyanov/Multicore-TSNE)
 
-[![Build Status](https://github.com/ankane/tsne/workflows/build/badge.svg?branch=master)](https://github.com/ankane/tsne/actions)
+[![Build Status](https://github.com/ankane/tsne-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/tsne-ruby/actions)
 
 ## Installation
 
@@ -96,22 +96,22 @@ Numo::DFloat.new(4, 3).rand
 
 ## History
 
-View the [changelog](https://github.com/ankane/tsne/blob/master/CHANGELOG.md)
+View the [changelog](https://github.com/ankane/tsne-ruby/blob/master/CHANGELOG.md)
 
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/tsne/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/tsne/pulls)
+- [Report bugs](https://github.com/ankane/tsne-ruby/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/tsne-ruby/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ankane/tsne.git
-cd tsne
+git clone https://github.com/ankane/tsne-ruby.git
+cd tsne-ruby
 bundle install
 bundle exec rake vendor:all
 bundle exec rake test
