@@ -24,7 +24,11 @@ module TSNE
         "libtsne_multicore.dylib"
       end
     else
-      "libtsne_multicore.so"
+      if RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
+        "libtsne_multicore.arm64.so"
+      else
+        "libtsne_multicore.so"
+      end
     end
   vendor_lib = File.expand_path("../vendor/#{lib_name}", __dir__)
   self.ffi_lib = [vendor_lib]

@@ -20,6 +20,7 @@ end
 namespace :vendor do
   task :linux do
     download_file("libtsne_multicore.so")
+    download_file("libtsne_multicore.arm64.so")
   end
 
   task :mac do
