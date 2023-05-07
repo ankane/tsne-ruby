@@ -9,7 +9,7 @@ High performance t-SNE for Ruby, powered by [Multicore t-SNE](https://github.com
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'tsne'
+gem "tsne"
 ```
 
 ## Getting Started
