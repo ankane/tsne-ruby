@@ -1,8 +1,13 @@
+Created by Laurens van der Maaten.
+Copyright 2012, Delft University of Technology. All rights reserved.
+
+Multicore version by Dmitry Ulyanov, 2016. dmitry.ulyanov.msu@gmail.com
+
+--------------------------------------------------------------------------------
+
 BSD 3-Clause License
 
-Created by Laurens van der Maaten.
-Copyright (c) 2012, Delft University of Technology. All rights reserved.
-Copyright (c) 2016, Dmitry Ulyanov (dmitry.ulyanov.msu@gmail.com)
+Copyright (c) [year], [fullname]
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

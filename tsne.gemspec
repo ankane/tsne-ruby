@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = TSNE::VERSION
   spec.summary       = "High performance t-SNE for Ruby"
   spec.homepage      = "https://github.com/ankane/tsne-ruby"
-  spec.license       = "MIT"
+  spec.license       = "BSD-3-Clause"
 
   spec.author        = "Andrew Kane"
   spec.email         = "andrew@ankane.org"
