@@ -11,12 +11,12 @@ class TSNETest < Minitest::Test
     if windows?
       assert_in_delta 0.19657319566021392, tsne.kl_divergence, 0.01
     elsif mac?
-      assert_in_delta -438.231549, embeddings[0, true][0]
+      assert_in_delta (-438.231549), embeddings[0, true][0]
       assert_in_delta 0.310034518, embeddings[0, true][1]
       assert_in_delta 0.19657319566021392, tsne.kl_divergence
     else
-      assert_in_delta -1049.43900138, embeddings[0, true][0]
-      assert_in_delta -895.52140476, embeddings[0, true][1]
+      assert_in_delta (-1049.43900138), embeddings[0, true][0]
+      assert_in_delta (-895.52140476), embeddings[0, true][1]
       assert_in_delta 0.16304681779803065, tsne.kl_divergence
     end
 
