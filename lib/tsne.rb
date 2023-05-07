@@ -5,8 +5,8 @@ require "numo/narray"
 require "fiddle/import"
 
 # modules
-require "tsne/model"
-require "tsne/version"
+require_relative "tsne/model"
+require_relative "tsne/version"
 
 module TSNE
   class Error < StandardError; end
