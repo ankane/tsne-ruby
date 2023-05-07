@@ -24,6 +24,7 @@ namespace :vendor do
 
   task :mac do
     download_file("libtsne_multicore.dylib")
+    download_file("libtsne_multicore.arm64.dylib")
   end
 
   task :windows do

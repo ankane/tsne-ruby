@@ -10,6 +10,10 @@ class TSNETest < Minitest::Test
 
     if windows?
       assert_in_delta 0.19657319566021392, tsne.kl_divergence, 0.01
+    elsif mac? && arm?
+      assert_in_delta (-49.99681479662187), embeddings[0, true][0]
+      assert_in_delta 133.18408988212286, embeddings[0, true][1]
+      assert_in_delta 0.19657319566021392, tsne.kl_divergence, 0.01
     elsif mac?
       assert_in_delta (-438.231549), embeddings[0, true][0]
       assert_in_delta 0.310034518, embeddings[0, true][1]
@@ -29,5 +33,9 @@ class TSNETest < Minitest::Test
 
   def mac?
     RbConfig::CONFIG["host_os"] =~ /darwin/i
+  end
+
+  def arm?
+    RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
   end
 end

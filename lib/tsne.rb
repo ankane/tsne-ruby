@@ -18,7 +18,11 @@ module TSNE
     if Gem.win_platform?
       "tsne_multicore.dll"
     elsif RbConfig::CONFIG["host_os"] =~ /darwin/i
-      "libtsne_multicore.dylib"
+      if RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
+        "libtsne_multicore.arm64.dylib"
+      else
+        "libtsne_multicore.dylib"
+      end
     else
       "libtsne_multicore.so"
     end
