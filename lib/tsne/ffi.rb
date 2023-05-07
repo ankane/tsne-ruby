@@ -7,7 +7,12 @@ module TSNE
       dlload Fiddle.dlopen(libs.shift)
     rescue Fiddle::DLError => e
       retry if libs.any?
-      raise e
+
+      if e.message =~ /Library not loaded: .+libomp/
+        raise LoadError, "OpenMP not found. Run `brew install libomp`"
+      else
+        raise e
+      end
     end
 
     typealias "bool", "char"

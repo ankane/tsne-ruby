@@ -13,7 +13,7 @@ def download_file(file)
   url = "https://github.com/ankane/ml-builds/releases/download/multicore-tsne-master/#{file}"
   puts "Downloading #{file}..."
   dest = "vendor/#{file}"
-  File.binwrite(dest, URI.parse(url).read)
+  File.binwrite(dest.sub(".openmp", ""), URI.parse(url).read)
   puts "Saved #{dest}"
 end
 
@@ -24,8 +24,8 @@ namespace :vendor do
   end
 
   task :mac do
-    download_file("libtsne_multicore.dylib")
-    download_file("libtsne_multicore.arm64.dylib")
+    download_file("libtsne_multicore.openmp.dylib")
+    download_file("libtsne_multicore.arm64.openmp.dylib")
   end
 
   task :windows do

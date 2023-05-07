@@ -12,6 +12,12 @@ Add this line to your application’s Gemfile:
 gem "tsne"
 ```
 
+On Mac, also install OpenMP:
+
+```sh
+brew install libomp
+```
+
 ## Getting Started
 
 Prep your data
