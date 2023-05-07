@@ -13,7 +13,15 @@ module TSNE
       @learning_rate = learning_rate
       @n_iter = n_iter
       @n_iter_early_exag = n_iter_early_exag
-      @verbose = verbose
+      @verbose =
+        case verbose
+        when true
+          1
+        when false
+          0
+        else
+          verbose
+        end
       @random_state = random_state
       @angle = angle
       @n_jobs = n_jobs

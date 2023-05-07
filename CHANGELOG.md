@@ -2,6 +2,7 @@
 
 - Added ARM shared libraries
 - Added support for OpenMP on Mac
+- Added support for boolean values to `verbose` option
 - Dropped support for Ruby < 3
 
 ## 0.1.1 (2020-02-11)
