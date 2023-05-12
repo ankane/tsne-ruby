@@ -1,4 +1,4 @@
-## 0.2.0 (unreleased)
+## 0.2.0 (2023-05-11)
 
 - Added ARM shared libraries
 - Added support for OpenMP on Mac
