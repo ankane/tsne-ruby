@@ -2,7 +2,7 @@
 
 High performance t-SNE for Ruby, powered by [Multicore t-SNE](https://github.com/DmitryUlyanov/Multicore-TSNE)
 
-[![Build Status](https://github.com/ankane/tsne-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/tsne-ruby/actions)
+[![Build Status](https://github.com/ankane/tsne-ruby/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/tsne-ruby/actions)
 
 ## Installation
 
