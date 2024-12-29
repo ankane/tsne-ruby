@@ -1,3 +1,7 @@
+## 0.2.1 (unreleased)
+
+- Fixed warning with Ruby 3.4
+
 ## 0.2.0 (2023-05-11)
 
 - Added ARM shared libraries
