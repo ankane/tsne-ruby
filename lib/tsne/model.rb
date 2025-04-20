@@ -39,8 +39,8 @@ module TSNE
       n, d = x.shape
 
       x = Fiddle::Pointer[x.to_binary]
-      y = Fiddle::Pointer.malloc(n * @n_components * Fiddle::SIZEOF_DOUBLE)
-      final_error = Fiddle::Pointer.malloc(Fiddle::SIZEOF_DOUBLE)
+      y = Fiddle::Pointer.malloc(n * @n_components * Fiddle::SIZEOF_DOUBLE, Fiddle::RUBY_FREE)
+      final_error = Fiddle::Pointer.malloc(Fiddle::SIZEOF_DOUBLE, Fiddle::RUBY_FREE)
 
       FFI.tsne_run_double(
         x, n, d, y, @n_components, @perplexity, @angle, @n_jobs,
