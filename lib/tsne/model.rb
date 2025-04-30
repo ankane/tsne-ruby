@@ -44,7 +44,7 @@ module TSNE
 
       FFI.tsne_run_double(
         x, n, d, y, @n_components, @perplexity, @angle, @n_jobs,
-        @n_iter, @n_iter_early_exag, @random_state, 0, @verbose, @early_exaggeration,
+        @n_iter, @n_iter_early_exag, @random_state, false, @verbose, @early_exaggeration,
         @learning_rate, final_error, @cheat_metric ? 1 : 0
       )
 

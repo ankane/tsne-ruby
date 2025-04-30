@@ -15,8 +15,6 @@ module TSNE
       end
     end
 
-    typealias "bool", "char"
-
     extern "void tsne_run_double(
       double* X, int N, int D, double* Y,
       int no_dims, double perplexity, double theta,
