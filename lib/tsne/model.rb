@@ -2,11 +2,19 @@ module TSNE
   class Model
     attr_reader :kl_divergence, :n_iter
 
-    def initialize(n_components: 2, perplexity: 30.0,
-      early_exaggeration: 12, learning_rate: 200,
-      n_iter: 1000, n_iter_early_exag: 250, verbose: 0,
-      random_state: -1, angle: 0.5, n_jobs: 1, cheat_metric: true)
-
+    def initialize(
+      n_components: 2,
+      perplexity: 30.0,
+      early_exaggeration: 12,
+      learning_rate: 200,
+      n_iter: 1000,
+      n_iter_early_exag: 250,
+      verbose: 0,
+      random_state: -1,
+      angle: 0.5,
+      n_jobs: 1,
+      cheat_metric: true
+    )
       @n_components = n_components
       @perplexity = perplexity
       @early_exaggeration = early_exaggeration
