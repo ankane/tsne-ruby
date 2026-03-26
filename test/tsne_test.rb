@@ -18,6 +18,10 @@ class TSNETest < Minitest::Test
       assert_in_delta (-438.231549), embeddings[0, true][0]
       assert_in_delta 0.310034518, embeddings[0, true][1]
       assert_in_delta 0.19657319566021392, tsne.kl_divergence
+    elsif arm?
+      assert_in_delta (-711.7511651208923), embeddings[0, true][0]
+      assert_in_delta 1351.0013275136828, embeddings[0, true][1]
+      assert_in_delta 0.1929562326195504, tsne.kl_divergence
     else
       assert_in_delta (-1049.43900138), embeddings[0, true][0]
       assert_in_delta (-895.52140476), embeddings[0, true][1]
